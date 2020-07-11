@@ -61,9 +61,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         if (!packageName.startsWith("com.ndss.", true)) {
             if ((0..50).random() == 10 || baseConfig.appRunCount % 100 == 0) {
-                val label = "You are using a fake version of the app. For your own safety download the original one from www.ndss.com. Thanks"
+                val label = "Welcome....Lets get Started"
                 ConfirmationDialog(this, label, positive = R.string.ok, negative = 0) {
-                    launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266")
+                   // launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266")
                 }
             }
         }
@@ -274,9 +274,9 @@ abstract class BaseSimpleActivity : AppCompatActivity() {
     fun startCustomizationActivity() {
         if (!packageName.contains("slootelibomelpmis".reversed(), true)) {
             if (baseConfig.appRunCount > 100) {
-                val label = "You are using a fake version of the app. For your own safety download the original one from www.ndss.com. Thanks"
+                val label = "Welcome....Lets get Started"
                 ConfirmationDialog(this, label, positive = R.string.ok, negative = 0) {
-                    launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266")
+                  //  launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266")
                 }
                 return
             }
